@@ -28,7 +28,7 @@ After you create your account in Flatfile, we create a **Environment ID**, a **P
 6. If you are using a different geographic region of Flatfile, update the API URL in your `.env` file as the `FLATFILE_API_URL` variable. This variable is optional, and defaults to our US region unless a different value is included in your `.env` file
 
 
-### 3. Deploy the listener Flatfile
+### 3. Deploy the listener to Flatfile
 
 1. Run the command `npx flatfile@latest deploy src/index.js`
 
@@ -40,8 +40,8 @@ If you have more than one environment, be sure to deploy this listener to each e
 
 This repository adds support for processing XLSX files by default. You may easily add support for additional file using one of the extractors available from Flatfile (or creating your own!) [View additional extractors here](https://flatfile.com/docs/plugins/overview)
 
-1. Install - add the desired plugin to your library with a command like `npm i @flatfile/plugin-json-extractor`
-2. Import - add the correct import statement to the `src/index.js` file, like `import { JSONExtractor } from "@flatfile/plugin-json-extractor";`
-3. Add to Listener - add the correct listener.use call to `src/index.js`, like `listener.use(JSONExtractor());`
+1. **Install -** add the desired plugin to your library with a command like `npm i @flatfile/plugin-json-extractor`
+2. **Import -** add the correct import statement to the `src/index.js` file, like `import { JSONExtractor } from "@flatfile/plugin-json-extractor";`
+3. **Add to Listener -** add the correct listener.use call to `src/index.js`, like `listener.use(JSONExtractor());`
 
 The index.js listener may contain multiple listener.use() calls, and each one will add support for parsing that file format.
