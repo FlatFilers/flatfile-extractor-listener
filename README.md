@@ -34,11 +34,11 @@ After you create your account in Flatfile, we create a **Environment ID**, a **P
 
 This only needs to be deployed one time for an environment, and then the listener will be used by all [Portals](https://flatfile.com/docs/apps/embedding/javascript/new_space_quickstart) referencing this environment via your publishable key.
 
-If you have more than one environment, be sure to deploy this listener to each environment, by updating the values in your `.env` file and running the deploy command above.
+*If you have more than one environment, be sure to deploy this listener to each environment, by updating the values in your `.env` file and running the deploy command above.*
 
 ## Support for Additional File Types
 
-This repository adds support for processing XLSX files by default. You may easily add support for additional file using one of the extractors available from Flatfile (or creating your own!) [View additional extractors here](https://flatfile.com/docs/plugins/overview)
+This repository adds support for processing XLSX files by default. You may easily add support for additional formats using one of the extractors available from Flatfile (or creating your own!) [View additional extractors here](https://flatfile.com/docs/plugins/overview)
 
 1. **Install -** add the desired plugin to your library with a command like `npm i @flatfile/plugin-json-extractor`
 2. **Import -** add the correct import statement to the `src/index.js` file, like `import { JSONExtractor } from "@flatfile/plugin-json-extractor";`
